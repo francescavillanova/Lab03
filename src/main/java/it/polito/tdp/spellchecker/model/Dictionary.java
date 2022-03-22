@@ -42,7 +42,7 @@ public class Dictionary {
 				paroleErrate.add(s);
 		}
 		Long end=System.nanoTime();
-		tempo=end-start;
+		tempo=(end-start)*10^9; //moltiplico per averlo in secondi da nanosecondi
 		
 		return paroleErrate;
 	}

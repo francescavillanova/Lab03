@@ -48,7 +48,7 @@ public class FXMLController {
     void clear(ActionEvent event) { 
     	txtTesto.clear();
     	txtCorr.clear();
-    	txtTempo.setText("");
+    	txtTempo.setText("");  //perchè non ha clear
     	txtErrori.setText("");
  
     } 
