@@ -39,8 +39,12 @@ public class FXMLController {
     void check(ActionEvent event) { 
         model.loadDictionary(cmbLanguage.getValue());  //questo get prende cosa scelgo nel menù a tendina (comboBox)
         
-        txtCorr.setText(model.spellCheckText(txtTesto.getText()).toString());
-        txtErrori.setText(""+model.spellCheckText(txtTesto.getText()).size()); //"" per renderlo una stringa, guardo la dimensione dell'elenco di errori
+       // txtCorr.setText(model.spellCheckText(txtTesto.getText()).toString());
+       //txtErrori.setText(""+model.spellCheckText(txtTesto.getText()).size()); //"" per renderlo una stringa, guardo la dimensione dell'elenco di errori
+        
+        txtCorr.setText(model.spellCheckTextLinear(txtTesto.getText()).toString());
+        txtErrori.setText(""+model.spellCheckTextLinear(txtTesto.getText()).size());
+        
         txtTempo.setText(""+model.getTempo());
     } 
  
