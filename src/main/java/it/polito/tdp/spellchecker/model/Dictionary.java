@@ -71,22 +71,25 @@ public class Dictionary {
 		return paroleErrate;
 	}
 	
-	/*public int spellCheckTextDichotomic(int[] array, int elemento) {  
+//  Non so se è giusto
+	/*public int spellCheckTextDichotomic(List<String> dizionario, int elemento) {  
 
-		     int start = 0, end = array.length - 1, centro = 0;
+		     int start = 0;
+		     int end = dizionario.size() - 1;
+		     int centro = 0;
 		     while (start <= end)
 		     {
 		         centro = (start + end) / 2;
-		         if (elemento < array[centro])
+		         if (elemento < dizionario.get(centro))
 		         {
 		             end = centro - 1;
 		         }
 		         else
 		         {
-		             if (elemento > array[centro])
+		             if (elemento > dizionario.get(centro))
 		                 start = centro + 1;
 		             else
-		                 return centro; // Caso: elemento==array[centro]
+		                 return centro; // Caso: elemento==dizionario.get(centro)
 		         }
 		     }
 		     return -1;
